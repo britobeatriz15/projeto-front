@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
+
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* o asterisco serve para zerar e também estilizar todos os elementos
+ html da página criados pelo navegador */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* LOGO */
+
+.logo .imagem {
+    width: 100px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.logo .titulo {
+    margin-left: 7px;
+    font-size: 17px;
+    transition: 0.3s ease-in-out;
+    font-weight: 800;
+}
+
+.logo .titulo:hover {
+    color: #1ED760;
+}
+
+/* Fim da LOGO */
+
+
+/* Cabeçalho do projeto */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 624px) {
+    .cabecalho {
+        justify-content: center;
+    }
+
+    .cabecalho .logo {
+        margin-bottom: 30px;
+    }
+
+    .cabecalho .menu .item a {
+        font-size: calc(0.6em + 1vw);
+    }
+}
+
+.cabecalho .navegacao .menu {
+    display: flex;
+}
+
+.cabecalho .navegacao .menu .item {
+    margin: 10px;
+}
+
+.cabecalho .navegacao .menu .item a {
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.cabecalho .navegacao .menu .item a:hover {
+    background-color: #1ED760;
+    color: white;
+}
+
+/* Fim do Cabeçalho do projeto */
+
+/* Painel */
+
+.conteudo-principal .paineis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+}
+
+/* ajustando o tamanho do conteudo do painel com MEDIA
+que aparece na tela de celular, então quando chegar em 
+900 ele ajusta a tela*/
+
+@media(max-width: 900px) {
+    .conteudo-principal .paineis {
+        height: 500px;
+    }
+}
+
+.conteudo-principal .paineis .imagem-painel {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%);
+
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.conteudo-principal .paineis .projeto1 {
+    background-image: url('../images/imagens/painel1.jpg');
+}
+
+.conteudo-principal .paineis .projeto2 {
+    background-image: url('../images/imagens/painel2.jpg');
+}
+
+.conteudo-principal .paineis .projeto3 {
+    background-image: url('../images/imagens/painel3.jpg');
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar {
+    opacity: 1;
+}
+
+.conteudo-principal .paineis .titulo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+}
+
+.conteudo-principal .paineis .seta {
+    background-image: url('../images/imagens/seta.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.conteudo-principal .paineis .seta.btn-voltar {
+    left: 20px;
+    transform: rotateY(180deg);
+}
+
+.conteudo-principal .paineis .seta.btn-avancar {
+    right: 20px;
+}
+
+/* Fim do Painel */
+
+/* Quem somos */
+
+.quem-somos{
+    background-color: #2941AB;
+}
+
+.quem-somos .conteudo{
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.quem-somos .conteudo .informacoes{
+    width: 40%;
+}
+
+.quem-somos .conteudo .imagem{
+    width: 60%;
+}
+
+.quem-somos .conteudo .informacoes .titulo{
+    font-size: 50px;
+    color: #1ED760;
+    margin-bottom: 20px;
+}
+
+.quem-somos .conteudo .informacoes .texto{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;   
+}
+
+/* ajustando o tamanho do conteudo do quem somos com MEDIA
+para aparecer melhor quando chegar em 1200px ele ajusta a tela
+E o display none é para esconder a imagem para nao ficar estranho 
+quando a tela for menor*/
+
+@media(max-widht:1200px){
+    .quem-somos .conteudo{
+        flex-direction: column;
+        text-align: center;   
+        padding: 100px 30px;
+    }
+
+    .quem-somos .conteudo .imagem{
+        display: none;
+    }
+
+    .quem-somos .conteudo .informacoes{
+        width: 100%;
+    }
+}
+
+/* Fim do Quem somos */
+
+/* Rodapé */
+
+/* padding: 80px 0 20px 0; - 80px é cima 0 direita 20 em baixo 0 esquerda */ 
+
+.rodape{
+    padding: 80px 0 20px 0;
+}
+
+.rodape .navegacao{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rodape .redes-sociais{
+    display: flex;
+}
+
+.rodape .redes-sociais a{
+    display: flex;
+    justify-content: center;
+    margin:  0 10px;
+    font-size: 30px;
+    border: 2px solid #111;
+    border-radius: 70%;
+    padding: 15px;
+    width: 65px;
+    transition: 0.3s ease-in-out;
+}
+
+.rodape .redes-sociais a:hover{
+    background-color: #1ED760;
+}
+
+.rodape .navegacao .logo .imagem{
+    width: 100px;
+}
+
+.rodape .copyright{
+    margin-top: 70px;
+    text-align: center;
+}
+
+/* ajustando o tamanho do conteudo do rodapé com MEDIA
+para aparecer melhor quando chegar em 940px ele ajusta a tela*/
+
+@media(max-widht: 940px){
+    .rodape .navegacao{
+        justify-content: center;
+    }
+
+    .rodape .navegacao .logo{
+        margin-bottom: 30px;
+    }
+
+    .rodape .navegacao .logo,
+    .rodape .navegacao .redes-sociais {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Fim do rodapé */
